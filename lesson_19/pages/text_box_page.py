@@ -23,3 +23,8 @@ class TextBoxPage:
     def get_output_text(self):
         output_div = self.driver.find_element(*Locators.OUTPUT_DIV)
         return output_div.text
+#  тут какое-то изменение кода
+#  тут какое-то изменение кода
+#  тут какое-то изменение кода
+#  тут какое-то изменение кода
+#  тут какое-то изменение кода

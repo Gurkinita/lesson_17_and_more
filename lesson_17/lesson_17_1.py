@@ -1,6 +1,5 @@
-
 import pytest
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as EC  # noqa
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.select import Select
 from selenium import webdriver
@@ -9,6 +8,7 @@ import time
 from selenium.webdriver.common.action_chains import ActionChains
 import allure
 
+
 # 123
 @pytest.fixture
 def browser():
@@ -16,11 +16,11 @@ def browser():
     yield driver
     driver.quit()
 
+
 @allure.title("добавление нового пользователя")
 @allure.feature("Развод на деньги")
 @allure.story("добавление юзера")
 @allure.severity(allure.severity_level.CRITICAL)
-
 def test_1(browser):
     browser.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login")
     browser.set_window_size(1920, 1080)
@@ -65,7 +65,6 @@ def test_1(browser):
 @allure.feature("проверка валюты")
 @allure.story("открыть пользователя Гарри")
 @allure.severity(allure.severity_level.BLOCKER)
-
 def test_2(browser):
     browser.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login")
     browser.set_window_size(1920, 1080)
@@ -107,7 +106,6 @@ def test_2(browser):
 @allure.feature("админ логин")
 @allure.story("список пользователей")
 @allure.severity(allure.severity_level.NORMAL)
-
 def test_3(browser):
     browser.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login")
     browser.set_window_size(1920, 1080)
@@ -121,23 +119,18 @@ def test_3(browser):
         (By.CSS_SELECTOR, "body > div > div > div.ng-scope > div > div.center > button:nth-child(3)")))
 
     button_3 = browser.find_element(By.CSS_SELECTOR,
-    "body > div > div > div.ng-scope > div > div.center > button:nth-child(3)")
+                                    "body > div > div > div.ng-scope > div > div.center > button:nth-child(3)")
     button_3.click()
 
     wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR,
-    "body > div > div > div.ng-scope > div > div.ng-scope > div > div > table > tbody > tr:nth-child(1) > td:nth-child(5) > button")))
+    "body > div > div > div.ng-scope > div > div.ng-scope > div > div > table > tbody > tr:nth-child(1) > td:nth-child(5) > button"))) # noqa
 
     table_button = browser.find_element(By.CSS_SELECTOR,
-    "body > div > div > div.ng-scope > div > div.ng-scope > div > div > table > tbody > tr:nth-child(1) > td:nth-child(5) > button")
+    "body > div > div > div.ng-scope > div > div.ng-scope > div > div > table > tbody > tr:nth-child(1) > td:nth-child(5) > button") # noqa
     table_button.click()
 
 
-
-
-
-
-
-class Test_4():
+class Test4():
 
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
@@ -160,9 +153,7 @@ class Test_4():
         time.sleep(2)
 
 
-
-
-class Test_5():
+class Test5():
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
@@ -222,9 +213,7 @@ class Test_5():
         actions.double_click(element).perform()
 
 
-
-
-class Test_6():
+class Test6():
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
@@ -251,11 +240,7 @@ class Test_6():
         time.sleep(2)
 
 
-
-
-
-
-class Test_7():
+class Test7():
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
@@ -283,9 +268,7 @@ class Test_7():
         self.driver.find_element(By.CSS_SELECTOR, "input:nth-child(3)").click()
 
 
-
-
-class Test_8():
+class Test8():
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
@@ -307,7 +290,7 @@ class Test_8():
         self.driver.find_element(By.CSS_SELECTOR, "button").click()
 
 
-class Test_9():
+class Test9():
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
