@@ -22,3 +22,6 @@ def ping_websites(websites, count=3):
 
 sites_for_checking = ['www.ringcentral.com', 'www.youtube.com']
 ping_websites(sites_for_checking)
+
+
+#  тут какое-то изменение кода
